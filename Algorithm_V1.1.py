@@ -239,7 +239,7 @@ def parsimony_algorithm(Distribution, Sweep_Aim, Phasotypes):
 
 	return corrected_sweeps, corrected_distributions
 
-
+### This is an unproven method aiming to fix missing data by combining samples with missing genes by weighting distances to the sweep data set aiming to overcome small samples sizes where missing data points would impact resolutions
 
 def Find_Missing_Data(Dist_Input, Missing_Data, Phasotypes):
 
@@ -303,11 +303,11 @@ def run_algorithm(file, output_file):
 
 	## This is an optional call -- if you want to include and correct for missing data using parsimony un-comment (remove the """ from the top and bottom)
 
-
+	"""
 	if len(Missing) != 0:
 		error_correct_distribution = Find_Missing_Data(Distribution, Missing,Phasotype)
 		Distribution = error_correct_distribution
-
+	"""
 
 	ratio_of_phasotypes = normalise(Distribution)
 	corrected_sweeps, corrected_distributions = parsimony_algorithm(ratio_of_phasotypes,Sweep, Phasotype)
