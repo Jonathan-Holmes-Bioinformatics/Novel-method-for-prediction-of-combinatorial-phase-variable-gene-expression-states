@@ -50,7 +50,7 @@ The .py scripts where written in Python version (3.10) and require no further li
 To run simply call the script in python with the PSAnalyse file:
 
 ```
-python3 Gene_ON_State path_to_directory/Example_Input.csv
+python3 Gene_ON_State.py path_to_directory/Example_Input.csv
 
 ```
 To adjust the slippage rates and gene ON length data, edit within the script the dictionaries: track data (state) and prev_slip (state) and post_slip(state). 
